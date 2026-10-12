@@ -15,4 +15,4 @@ may                1       2       0       0
 simple,            2       4       0       1
 ```
 
-**Changed in 2026:** `operator<` gained a final `return` (every case was handled, but the compiler couldn't prove it).
+**Changed in 2026:** `operator<` gained a final `return` (every case was handled, but the compiler couldn't prove it), and the word array is freed at the end.

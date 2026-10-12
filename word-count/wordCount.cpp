@@ -40,6 +40,7 @@ int main (int argc, char * argv [])
 	WordSort (W, count);//might need to fix!!!!!!!!!
 	fin.close();
 	WriteReport (cout, W, count);
+	delete [] W;
 	return 0;
 }
 				
