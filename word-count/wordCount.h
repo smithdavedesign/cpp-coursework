@@ -77,7 +77,7 @@ void WordData::SetWord ( const string & InWord)
   word=InWord;
 
 
-  for (int i = 0; i < InWord.length(); i++)
+  for (int i = 0; i < (int) InWord.length(); i++)
     {
 
       if (isalpha(word[i]))

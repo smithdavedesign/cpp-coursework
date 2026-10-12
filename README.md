@@ -24,4 +24,6 @@ CI builds everything with gcc on every push.
 
 ## History
 
-These used to be separate repos, now archived: HangMan, Multiplication-Table, automatic-coin-dispenser- and HowManny. In 2026 they were cleaned up (build junk removed, one Makefile each), and the bugs that stopped them running on a modern compiler were fixed. Each README says what changed.
+These used to be separate repos, now archived: HangMan, Multiplication-Table, automatic-coin-dispenser- and HowManny. In 2026 they were cleaned up: build junk removed, one Makefile each, no warnings under `-Wall -Wextra`. The bugs that stopped them running on a modern compiler were fixed, and every program runs clean under AddressSanitizer and UndefinedBehaviorSanitizer. Each README says what changed.
+
+CI builds with gcc and clang with warnings as errors. It also runs every program with sample input under the sanitizers (`smoke.sh`).

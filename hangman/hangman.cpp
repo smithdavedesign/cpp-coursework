@@ -39,7 +39,7 @@ int main ()
 	{ 
 	  found=false;
 	  Display (misses);
-	  for (int i=0; i<blanks.size();i++){
+	  for (int i=0; i<(int) blanks.size();i++){
 	    cout<<blanks[i]<<' ';
 	  }  
 	  cout<<endl;
@@ -49,7 +49,7 @@ int main ()
 	  cin>> guess;
 	  guess=toupper (guess);
 	
-	  for(int i=0;i<word.size();i++ ) 
+	  for(int i=0;i<(int) word.size();i++ ) 
 	    {
 	      if (word[i] == toupper(guess))
 		{
@@ -93,7 +93,7 @@ then ask if they want to play again
 
 string ToUpper(string s){
   string r=s;
-  for (int i=0; i<s.size(); i++) 
+  for (int i=0; i<(int) s.size(); i++) 
     r[i]= toupper(s[i]);
   return r;  
 }
