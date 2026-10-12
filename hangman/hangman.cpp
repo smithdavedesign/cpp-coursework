@@ -113,7 +113,13 @@ string GetSecretWord ()
 // This function will get a word from the secret word file
 {
   // Declare and open the file of secret words
-  ifstream file ("/home/faculty/tiawatts/cs115pickup/p2words.txt");
+  // The word list ships next to the program (it was a path on the course server).
+  ifstream file ("hangman.txt");
+  if (!file)
+    {
+      cerr << "Can't open hangman.txt: run hangman from its own folder." << endl;
+      exit (1);
+    }
   // Declare a varaible to hold the number of words
   int numwords = 1;
   // Declare a varaible to hold a random number

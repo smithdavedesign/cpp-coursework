@@ -1,0 +1,13 @@
+# build output
+hangman/hangman
+multiplication-table/multiplication-table
+coin-dispenser/coin-dispenser
+word-count/word-count
+*.o
+*.out
+*.x
+a.out
+.AppleDouble/
+.DS_Store
+*~
+.#*

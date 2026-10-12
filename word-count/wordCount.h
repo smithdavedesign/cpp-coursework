@@ -161,6 +161,7 @@ bool WordData::operator < (const WordData & OtherWord) const
 	  return false;
 	}
     }
+  return false;
 }
 
 #endif
