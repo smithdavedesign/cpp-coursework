@@ -15,6 +15,7 @@ class WordData
 public:
   WordData ();
   WordData (const WordData & OtherWord);
+  WordData & operator = (const WordData & OtherWord);
   ~WordData ();
   void SetWord (const string & InWord);
   string GetWord () const;
@@ -52,6 +53,16 @@ WordData :: WordData (const WordData & OtherWord)
   consonants=OtherWord.consonants;
   digits=OtherWord.digits;
   specialchars=OtherWord.specialchars;
+}
+
+WordData & WordData :: operator = (const WordData & OtherWord)
+{ // the same fields as the copy constructor (the sort swaps words by assignment)
+  word=OtherWord.word;
+  vowels=OtherWord.vowels;
+  consonants=OtherWord.consonants;
+  digits=OtherWord.digits;
+  specialchars=OtherWord.specialchars;
+  return *this;
 }
 
 WordData::~WordData ()
